@@ -42,9 +42,8 @@ const errorHandler = (err, req, res, next) => {
 /* eslint-disable no-unused-vars */
 const notFound = (req, res, next) => {
     const error = new ApiError(httpStatus.NOT_FOUND, httpStatus[httpStatus.NOT_FOUND]);
-    error.statusCode = 404;
 
-    return errorHandler(error, req, res);
+    return errorHandler(error, req, res, next);
 };
 /* eslint-enable no-unused-vars */
 
